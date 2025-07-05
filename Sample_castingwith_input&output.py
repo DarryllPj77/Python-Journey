@@ -1,12 +1,22 @@
-#Type casting with user input
-name = input("Enter your name: ")
-age =float(input("Enter your  age: "))
+# Type casting with user input
 
-#age = int(age)                                       
+# Ask the user for their name (input is always a string)
+name = input("Enter your name: ")
+
+# Ask the user for their age
+# input() returns a string, so we cast it to float to allow decimal ages
+age = float(input("Enter your age: "))
+
+# Optionally, we could cast to int using: age = int(age)
+# But using float allows for inputs like 20.5
+
+# Add 1 to the age (this works because it's a number now)
 age = age + 1
 
+# Display output using f-strings
 print(f"Hello {name}")
-print(f"Your are {age} years old")
+print(f"You are {age} years old")  # Displays float (e.g., 21.0 if 20 was input)
+
 
 import math  # Import math module to use math.sqrt()
 
